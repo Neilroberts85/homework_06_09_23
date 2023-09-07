@@ -3,3 +3,4 @@ from controllers.event_controller import event_blueprint
 
 app = Flask(__name__)
 app.register_blueprint(event_blueprint)
+# app = Flask(__name__, static_url_path='/static')

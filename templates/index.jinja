@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
     <title>{{ title }}</title>
 </head>
 <body>
 <h1>{{ title }}</h1>
 <form action="/events" method="post">
+
 <label for ="name">Name</label>
 <input type="text" name ="name" id="name">
 
@@ -35,7 +37,7 @@
 </form>
 <ul>
     {% for event in events %}
-        <li>{{event.name}} {{ event.date }} {{ event.number_of_guests}} {{ event.room_location}} {{ event.description}}</li>
+        <li>{{event.name}}, {{ event.date }}, {{ event.number_of_guests}}, {{ event.room_location}}, {{ event.description}}</li>
         {% if event.recurring %}
             recurring
             
